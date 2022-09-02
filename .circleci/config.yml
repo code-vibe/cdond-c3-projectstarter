@@ -88,7 +88,7 @@ jobs:
   test-backend:
     docker:
       - image: circleci/node:13.8.0
-    teps:
+    steps:
       - checkout
       - restore_cache:
           keys: [backend-build]
