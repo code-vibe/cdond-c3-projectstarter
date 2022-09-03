@@ -14,7 +14,8 @@
   
   pre_tasks:
     - name: "wait 300 seconds for target connection to become reachable/usable."
-      wait_for_connection
+      wait_for:
+        timeout: 300
     #- name: Wait 300 seconds, but only start checking after 60 seconds
       #wait_for_connection:
         #delay: 60
