@@ -176,7 +176,7 @@ jobs:
             - project/.circleci/ansible/inventory.txt
       - destroy-environment:
           workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
-  #Something to push
+  
   # configure-infrastructure:
   #   docker:
   #     # Docker image here that supports Ansible
