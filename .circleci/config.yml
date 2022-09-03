@@ -183,14 +183,14 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-              fingerprints: ["0d:12:eb:43:e3:73:13:32:d0:8c:a6:35:45:5f:c4:08"] 
+              fingerprints: ["a5:5b:40:45:be:59:59:01:88:de:44:82:11:f5:b9:9a"] 
       - attach_workspace:
             at: ~/
       - run:
           name: Install dependencies
           command: |
             apk add --update ansible
-            apk add --update openssh
+           # apk add --update openssh
             apk add --update tar
             apk add --update gzip
             pip3 install awscli
