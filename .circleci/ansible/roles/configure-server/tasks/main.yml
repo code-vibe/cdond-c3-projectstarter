@@ -1,26 +1,29 @@
 ---
-- name: "update and upgrade packages."
- become: yes
- apt:
-   upgrade: yes
-   update_cache: yes
-   cache_valid_time: 86400
+# - name: "update apt packages."
+#  become: true
+#  apt:
+#    update_cache: yes
+
+# - name: "upgrade packages"
+#  become: true
+#  apt:
+#     upgrade: yes
 
 
-- name: remove dependencies that are no longer required
-  become: yes
-  apt:
-    autoremove: yes
+# - name: remove dependencies that are no longer required
+#   become: true
+#   apt:
+#     autoremove: yes
 
 - name: "install dependencies."
-  become: yes
+  become: true
   apt:
     name: ["nodejs", "npm"]
     state: latest
     update_cache: yes
 
 - name: "install pm2"
-  become: yes
+  become: true
   npm:
     name: pm2
     global: yes
